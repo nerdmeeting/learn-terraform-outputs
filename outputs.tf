@@ -1,4 +1,4 @@
-# Copyright (c) HashiCorp, Inc.
-# SPDX-License-Identifier: MPL-2.0
-
-# Output declarations
+output "vpc_id" {
+  description = "ID of the project VPC"
+  value = module.vpc.vpc_id
+}
