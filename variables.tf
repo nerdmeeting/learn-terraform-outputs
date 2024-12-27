@@ -1,10 +1,13 @@
-# Copyright (c) HashiCorp, Inc.
-# SPDX-License-Identifier: MPL-2.0
+variable "project_version" {
+  description = "Version of the project"
+  type = string
+  default = "0.1.0"
+}
 
 variable "aws_region" {
   description = "AWS region"
   type        = string
-  default     = "us-east-1"
+  default     = "us-west-2"
 }
 
 variable "vpc_cidr_block" {
