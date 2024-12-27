@@ -16,7 +16,7 @@ data "aws_availability_zones" "available" {
 
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "5.7.0"
+  version = "5.17.0"
 
   cidr = var.vpc_cidr_block
 
@@ -30,7 +30,7 @@ module "vpc" {
 
 module "app_security_group" {
   source  = "terraform-aws-modules/security-group/aws//modules/web"
-  version = "5.1.2"
+  version = "5.2.0"
 
   name        = "web-server-sg"
   description = "Security group for web-servers with HTTP ports open within VPC"
@@ -41,7 +41,7 @@ module "app_security_group" {
 
 module "lb_security_group" {
   source  = "terraform-aws-modules/security-group/aws//modules/web"
-  version = "5.1.2"
+  version = "5.2.0"
 
   name        = "lb-sg-project-alpha-dev"
   description = "Security group for load balancer with HTTP ports open within VPC"
